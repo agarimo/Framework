@@ -1,3 +1,5 @@
+package ctrl;
+
 
 import javafx.fxml.FXMLLoader;
 
@@ -9,27 +11,27 @@ import java.io.IOException;
  * All methods on the navigator are static to facilitate simple access from
  * anywhere in the application.
  */
-public class VistaNavigator {
+public class Nav {
 
     /**
      * Convenience constants for fxml layouts managed by the navigator.
      */
-    public static final String MAIN = "main.fxml";
-    public static final String VISTA_1 = "vista1.fxml";
-    public static final String VISTA_2 = "vista2.fxml";
+    public static final String MAIN = "/view/main.fxml";
+    public static final String VISTA_1 = "/view/vista1.fxml";
+    public static final String VISTA_2 = "/view/vista2.fxml";
 
     /**
      * The main application layout controller.
      */
-    private static MainController mainController;
+    private static MainC mainController;
 
     /**
      * Stores the main controller for later use in navigation tasks.
      *
      * @param mainController the main application layout controller.
      */
-    public static void setMainController(MainController mainController) {
-        VistaNavigator.mainController = mainController;
+    public static void setMainController(MainC mainController) {
+        Nav.mainController = mainController;
     }
 
     /**
@@ -50,7 +52,7 @@ public class VistaNavigator {
      */
     public static void loadVista(String fxml) {
         try {
-            mainController.setVista(FXMLLoader.load(VistaNavigator.class.getResource(fxml)));
+            mainController.setVista(FXMLLoader.load(Nav.class.getResource(fxml)));
         } catch (IOException e) {
             e.printStackTrace();
         }

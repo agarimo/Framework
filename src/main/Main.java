@@ -1,3 +1,7 @@
+package main;
+
+import ctrl.Nav;
+import ctrl.MainC;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -30,12 +34,12 @@ public class Main extends Application {
     private Pane loadMainPane() throws IOException {
         FXMLLoader loader = new FXMLLoader();
 
-        Pane mainPane = (Pane) loader.load(getClass().getResourceAsStream(VistaNavigator.MAIN));
+        Pane mainPane = (Pane) loader.load(getClass().getResourceAsStream(Nav.MAIN));
 
-        MainController mainController = loader.getController();
+        MainC mainController = loader.getController();
 
-        VistaNavigator.setMainController(mainController);
-        VistaNavigator.loadVista(VistaNavigator.VISTA_1);
+        Nav.setMainController(mainController);
+        Nav.loadVista(Nav.VISTA_1);
 
         return mainPane;
     }
@@ -49,10 +53,12 @@ public class Main extends Application {
      */
     private Scene createScene(Pane mainPane) {
         Scene scene = new Scene(mainPane);
-        scene.getStylesheets().setAll(getClass().getResource("vista.css").toExternalForm());
+        scene.getStylesheets().setAll(getClass().getResource("/css/vista.css").toExternalForm());
 
         return scene;
     }
+    
+    
 
     public static void main(String[] args) {
         launch(args);

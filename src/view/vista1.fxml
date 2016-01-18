@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?scenebuilder-stylesheet vista.css?>
 
-<StackPane fx:id="vista1" xmlns:fx="http://javafx.com/fxml" fx:controller="Vista1Controller">
+<StackPane fx:id="vista1" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ctrl.Vista1C">
   <children>
     <Button mnemonicParsing="false" onAction="#nextPane" text="Next Pane" />
   </children>
