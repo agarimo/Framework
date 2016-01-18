@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.WinC">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="677.0">
+         <items>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" text="Button" />
+            <ChoiceBox prefHeight="30.0" prefWidth="150.0" />
+            <ChoiceBox prefHeight="30.0" prefWidth="150.0" />
+         </items>
+      </ToolBar>
+      <TableView layoutX="14.0" layoutY="49.0" prefHeight="424.0" prefWidth="650.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

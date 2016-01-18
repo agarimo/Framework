@@ -19,6 +19,7 @@ public class Nav {
     public static final String MAIN = "/view/main.fxml";
     public static final String VISTA_1 = "/view/vista1.fxml";
     public static final String VISTA_2 = "/view/vista2.fxml";
+    public static final String WIN = "/view/Win.fxml";
 
     /**
      * The main application layout controller.
